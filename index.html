@@ -2,93 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ChatGPT Clone</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>AI Chat Assistant</title>
+    <link rel="shortcut icon" href="img/chatbot.jpg" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <!-- Google fonts link for icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
 </head>
 <body>
-    <div class="chat-container">
-        <div class="chat outgoing">
-            <div class="chat-content">
-                <div class="chat-details">
-                    <img src="img/user.jpg" alt="user-img">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, nemo?</p>
-                </div>
+    <main class="chat-wrapper">
+        <div class="chat-container" role="log" aria-live="polite">
+            <div class="default-text">
+                <h1>AI Assistant</h1>
+                <p>Start a conversation with your AI assistant<br>Your chat history will appear here</p>
             </div>
         </div>
-        <div class="chat incoming">
-            <div class="chat-content">
-                <div class="chat-details">
-                    <img src="img/chatbot.jpg" alt="chatbot-img">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, nemo?</p>
-                    <span class="material-symbols-rounded">content_copy</span>
-                </div>
-            </div>
-        </div>
-        <div class="chat incoming">
-            <div class="chat-content">
-                <div class="chat-details">
-                    <img src="img/chatbot.jpg" alt="chatbot-img">
-                    <p><div class="typing-animation">
-                        <div class="typing-dot" style="--delay:0.2s"></div>
-                        <div class="typing-dot" style="--delay:0.3s"></div>
-                        <div class="typing-dot" style="--delay:0.4s"></div>
-                    </div></p>
-                    <span class="material-symbols-rounded">content_copy</span>
-                </div>
-            </div>
-        </div>
-        <div class="chat outgoing">
-            <div class="chat-content">
-                <div class="chat-details">
-                    <img src="img/user.jpg" alt="user-img">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum corrupti possimus, atque, accusamus, explicabo adipisci tempora nam quo veniam assumenda iste consequuntur nihil tenetur maxime quas. In, ipsam quia? Dolore minima vitae quod repellat possimus tempore rerum quas voluptate atque!</p>
-                </div>
-            </div>
-        </div>
-        <div class="chat incoming">
-            <div class="chat-content">
-                <div class="chat-details">
-                    <img src="img/chatbot.jpg" alt="chatbot-img">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo voluptas, dolorem omnis temporibus nemo commodi dolore accusantium soluta corrupti inventore et quos, illum cupiditate placeat non nobis ea a eaque.</p>
-                    <span class="material-symbols-rounded">content_copy</span>
-                </div>
-            </div>
-        </div>
-        <div class="chat outgoing">
-            <div class="chat-content">
-                <div class="chat-details">
-                    <img src="img/user.jpg" alt="user-img">
-                    <p>Lorem ipsum dolor sit amet.</p>
-                </div>
-            </div>
-        </div>
-        <div class="chat incoming">
-            <div class="chat-content">
-                <div class="chat-details">
-                    <img src="img/chatbot.jpg" alt="chatbot-img">
-                    <p>Lorem ipsum dolor sit.</p>
-                    <span class="material-symbols-rounded">content_copy</span>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- Typing container -->
-     <div class="typing-container">
-        <div class="typing-content">
-            <div class="typing-textarea">
-                <textarea id="chat-input" placeholder="Enter prompt here" required></textarea>
-                <span id="send-btn" class="material-symbols-rounded">send</span>
+        <form class="input-container" id="chat-form" autocomplete="off">
+            <div class="input-wrapper">
+                <textarea 
+                    id="chat-input" 
+                    placeholder="Type your message here..."
+                    rows="1"
+                    aria-label="Chat input"
+                    spellcheck="true"
+                ></textarea>
+                <button type="submit" id="send-btn" class="icon-btn" aria-label="Send message">
+                    <span class="material-symbols-rounded">send</span>
+                </button>
             </div>
-            <div class="typing-controls">
-                <span id="theme-btn" class="material-symbols-rounded">light_mode</span>
-                <span id="delete-btn" class="material-symbols-rounded">delete</span>
+            <div class="controls-container">
+                <button id="theme-btn" class="icon-btn" aria-label="Toggle theme">
+                    <span class="material-symbols-rounded theme-icon">light_mode</span>
+                </button>
+                <button id="delete-btn" class="icon-btn" aria-label="Clear history">
+                    <span class="material-symbols-rounded">delete</span>
+                </button>
             </div>
-        </div>
-     </div>
-    
+        </form>
+    </main>
+    <script src="script.js"></script>
 </body>
 </html>
