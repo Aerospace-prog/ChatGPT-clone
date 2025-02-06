@@ -14,15 +14,24 @@ The chat application UI is designed to provide a seamless and intuitive user exp
 ### Screenshots
 
 * Chat Interface: 
-  ![Chat Interface](images/chat-interface.png)
-* Typing Animation: 
-  ![Typing Animation](images/typing-animation.png)
+  <img width="1509" alt="image" src="https://github.com/user-attachments/assets/c21192ee-2b46-4418-b822-a9a107cacd5a" />
+
+* Typing Animation:
+  <img width="939" alt="image" src="https://github.com/user-attachments/assets/604a53aa-17f0-421a-a1af-ddc1ff6b9d70" />
+
+  
+
 * Theme Switcher: 
-  ![Theme Switcher](images/theme-switcher.png)
+  <img width="1505" alt="image" src="https://github.com/user-attachments/assets/970b8474-e9f9-4023-860a-30327f91c7e6" />
+
 
 ### Videos
 
-* Demo Video: [Insert link to demo video]
+* Demo Video:  
+
+https://github.com/user-attachments/assets/ace47279-74b8-41ba-a525-dac06a39267e
+
+
 
 **Technical Details**
 --------------------
