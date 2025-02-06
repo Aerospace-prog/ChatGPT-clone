@@ -4,7 +4,7 @@
 **Introduction**
 ---------------
 
-This project is a modern and responsive chat application UI built using HTML, CSS, and CSS variables. The design is clean, minimalistic, and easy to use. The chat application features a dark theme with a sleek and modern design. The UI is fully customizable, and the code is well-structured and easy to understand.
+This project is a modern and responsive chat application UI built using HTML, CSS, JS and CSS variables. The design is clean, minimalistic, and easy to use. The chat application features a dark theme with a sleek and modern design. The UI is fully customizable, and the code is well-structured and easy to understand.
 
 The chat application UI is designed to provide a seamless and intuitive user experience. The UI is divided into two main sections: the chat container and the typing container. The chat container displays the conversation history, while the typing container allows users to input and send messages.
 
