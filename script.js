@@ -5,7 +5,7 @@ const themeButton = document.getElementById('theme-btn');
 const deleteButton = document.getElementById('delete-btn');
 
 let isGenerating = false;
-const API_KEY = 'AIzaSyCIRg5YIapdHRfY_I2zXsBdpnIERjCHr3Q'; // Replace with your actual API key
+const API_KEY = 'API-KEY'; // Replace with your actual API key
 
 const defaultHTML = `
     <div class="default-text">
