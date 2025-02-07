@@ -5,7 +5,7 @@ const themeButton = document.getElementById('theme-btn');
 const deleteButton = document.getElementById('delete-btn');
 
 let isGenerating = false;
-const API_KEY = 'API-KEY'; // Replace with your actual API key
+
 
 const defaultHTML = `
     <div class="default-text">
@@ -75,22 +75,15 @@ const handleSubmit = async (e) => {
 
 // Generate AI response
 const generateResponse = async (prompt) => {
-    const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${API_KEY}`;
-    
-    const response = await fetch(API_URL, {
+    const response = await fetch('/.netlify/functions/generate-response', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-            contents: [{
-                parts: [{ text: prompt }]
-            }]
-        })
+        body: JSON.stringify({ prompt }),
     });
 
-    if (!response.ok) throw new Error('API request failed');
-    
+    if (!response.ok) throw new Error('Failed to fetch AI response');
     const data = await response.json();
-    return data.candidates[0].content.parts[0].text;
+    return data.response;
 };
 
 // Append new message to chat
