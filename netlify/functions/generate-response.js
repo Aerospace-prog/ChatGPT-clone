@@ -5,6 +5,7 @@ export async function handler(event) {
     const API_KEY = process.env.API_KEY; // Access environment variable
     const { prompt } = JSON.parse(event.body); // Get user input from request body
 
+
     try {
         const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${API_KEY}`, {
             method: 'POST',
@@ -26,4 +27,4 @@ export async function handler(event) {
     } catch (error) {
         return { statusCode: 500, body: JSON.stringify({ error: error.message }) };
     }
-}
+};
