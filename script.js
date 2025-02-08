@@ -9,7 +9,7 @@ let isGenerating = false;
 
 const defaultHTML = `
     <div class="default-text">
-        <h1>Chat GPT Clone</h1>
+        <h1>AeroGPT</h1>
         <p>Start a conversation with your AI assistant<br>Your chat history will appear here</p>
     </div>`;
 
