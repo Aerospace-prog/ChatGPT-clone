@@ -1,7 +1,7 @@
 // netlify/functions/generate-response.js
-const fetch = require('node-fetch');
+import fetch from 'node-fetch';
 
-exports.handler = async (event) => {
+export async function handler(event) {
     const API_KEY = process.env.API_KEY; // Access environment variable
     const { prompt } = JSON.parse(event.body); // Get user input from request body
 
@@ -26,4 +26,4 @@ exports.handler = async (event) => {
     } catch (error) {
         return { statusCode: 500, body: JSON.stringify({ error: error.message }) };
     }
-};
+}
