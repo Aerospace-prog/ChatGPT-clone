@@ -1,9 +1,8 @@
-// netlify/functions/generate-response.js
 export async function handler(event) {
   const API_KEY = process.env.API_KEY;
 
   if (!API_KEY) {
-    console.error("Missing API_KEY environment variable");
+    console.error("Missing API_KEY");
     return {
       statusCode: 500,
       body: JSON.stringify({ error: "API_KEY not set in environment" }),
@@ -33,8 +32,7 @@ export async function handler(event) {
     );
 
     const data = await response.json();
-    console.log("API Response Status:", response.status);
-    console.log("API Response Data:", data);
+    console.log("API Response:", response.status, data);
 
     if (!response.ok) {
       return {
